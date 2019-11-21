@@ -1,0 +1,15 @@
+<h1>App Component</h1>
+
+<div class="container">
+  <div class="row">
+  <label for="Fname"></label>
+  <input type="text" id="Fname" [(ngModel)]="name">
+  <p> {{name}} </p>
+  </div>
+  <div class="row">
+    <!-- <app-server></app-server> -->
+    <div class="app-server"></div>
+
+    <app-sub-server></app-sub-server>
+  </div>
+</div>
