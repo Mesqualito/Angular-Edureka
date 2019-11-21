@@ -5,12 +5,18 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import {ServerComponent} from './servers/server.component';
 import { SubServerComponent } from './sub-server/sub-server.component';
+import { RedComponent } from './red/red.component';
+import { GreenComponent } from './green/green.component';
+import { YellowComponent } from './yellow/yellow.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ServerComponent,
-    SubServerComponent
+    SubServerComponent,
+    RedComponent,
+    GreenComponent,
+    YellowComponent
   ],
   imports: [
     BrowserModule,
