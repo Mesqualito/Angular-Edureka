@@ -1,14 +1,11 @@
 <div class="container">
   <div class="row">
-    <h2>Student Roster</h2>
+    <button (click)="toggleDisplay()">Toggle Display</button>
+    <p *ngFor="let click of counter" [ngStyle]="{color: getLength()}">{{click}}</p>
   </div>
   <div class="row">
-    <input type="text" placeholder="name" [(ngModel)]="currentName">&nbsp;<button (click)="add()"> Submit student name </button>
-  </div>
-  <div class="row">
-    <hr>
-    <ul>
-      <li *ngFor="let name of studentRoster">{{name}}</li>
-    </ul>
+    <p *ngIf="state === true">This is a paragraph to display or not based on structural directive 'ngIf'<br>
+      with an if-condition in the class based on the boolean variable 'state'<br>
+      which is inverted by event-binding the component's method 'toggleDisplay()' to the (click)-event of the HTML-element 'button' above.</p>
   </div>
 </div>
