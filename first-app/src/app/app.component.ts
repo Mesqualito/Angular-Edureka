@@ -6,18 +6,12 @@ import {Component} from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  flag = true;
+  studentRoster = ['Marina', 'Jochen', 'Suse'];
+  currentName = '';
 
-  toggleFlag() {
-    this.flag = !this.flag;
-    return this.flag;
-  }
-
-  getH1Color() {
-    if(this.flag === true) {
-      return 'green';
-    } else {
-      return 'red';
+  add() {
+    if (this.currentName !== '') {
+      this.studentRoster.push(this.currentName);
     }
   }
 

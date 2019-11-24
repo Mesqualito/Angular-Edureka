@@ -1,15 +1,14 @@
 <div class="container">
   <div class="row">
-    <h2 [ngStyle]="{color: getH1Color()}">This is an example of 'ngIf'</h2>
-    <p id="flagTrue" *ngIf="flag; else elseblog">Flag is true</p>
-    <ng-template #elseblog>
-      <p id="flagFalse">Flag is false</p>
-    </ng-template>
+    <h2>Student Roster</h2>
   </div>
   <div class="row">
-    <h2 [ngClass]="{attributeBinding: flag}">This is an example of 'ngClass'</h2>
+    <input type="text" placeholder="name" [(ngModel)]="currentName">&nbsp;<button (click)="add()"> Submit student name </button>
   </div>
   <div class="row">
-    <button (click)="toggleFlag()"> Toggle flag </button>
+    <hr>
+    <ul>
+      <li *ngFor="let name of studentRoster">{{name}}</li>
+    </ul>
   </div>
 </div>
