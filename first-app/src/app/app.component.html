@@ -1,24 +1,10 @@
 <div class="container">
   <div class="row">
-    <h1>App Component</h1>
+    <p>This is {{ interpol }} in the Angular framework</p>
   </div>
   <div class="row">
-    <div class="col-md-4">
-      <app-red></app-red>
-    </div>
-    <div class="col-md-4">
-      <app-green></app-green>
-    </div>
-    <div class="col-md-4">
-      <app-yellow></app-yellow>
-    </div>
-  </div>
-  <div class="row">
-    <label for="Fname"></label>
-    <input type="text" id="Fname" [(ngModel)]="name">
-    <p> {{name}} </p>
-  </div>
-  <div class="row">
-    <app-server></app-server>
+    <p>Server {{ serverName }} with PID {{ serverPID }} is {{ serverStatus }}.<br>
+      <!--Property binding: enable button after some time --->
+      <p><button [disabled]="changeButtonState" (click)="toggleServerStatus()"> Change </button></p>
   </div>
 </div>
