@@ -1,10 +1,17 @@
 <div class="container">
   <div class="row">
-    <p>This is {{ interpol }} in the Angular framework</p>
+    <!-- two-way-binding with ngModel -->
+    <label>Two-way property binding and event binding of an 'input'-HTML-element with ngModel:</label>&nbsp;
+    <input type="text" placeholder="Server Name" [(ngModel)]="serverName">
+  </div>
+  <div class="row">
+    <!-- only one-way (class to view) property binding with ngModel -->
+    <label>Only one-way (class to view) property binding of an 'input'-HTML-element with ngModel:</label>&nbsp;
+    <input type="text" placeholder="Server Name" [ngModel]="serverName">
   </div>
   <div class="row">
     <p>Server {{ serverName }} with PID {{ serverPID }} is {{ serverStatus }}.<br>
       <!--Property binding: enable button after some time --->
-      <p><button [disabled]="changeButtonState" (click)="toggleServerStatus()"> Change </button></p>
+      <p><button [disabled]="changeButtonState" (click)="toggleServerStatus()"> Toggle server power </button></p>
   </div>
 </div>
