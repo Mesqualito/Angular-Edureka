@@ -13,4 +13,12 @@ export class AppComponent {
     return this.flag;
   }
 
+  getH1Color() {
+    if(this.flag === true) {
+      return 'green';
+    } else {
+      return 'red';
+    }
+  }
+
 }

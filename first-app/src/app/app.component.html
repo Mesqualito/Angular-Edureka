@@ -1,9 +1,9 @@
 <div class="container">
   <div class="row">
-    <h2>This is an example of 'ngIf'</h2>
-    <p *ngIf="flag; else elseblog">Flag is true</p>
+    <h2 [ngStyle]="{color: getH1Color()}">This is an example of 'ngIf'</h2>
+    <p id="flagTrue" *ngIf="flag; else elseblog">Flag is true</p>
     <ng-template #elseblog>
-      <p>Flag is false</p>
+      <p id="flagFalse">Flag is false</p>
     </ng-template>
   </div>
   <div class="row">
