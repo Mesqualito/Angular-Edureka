@@ -7,6 +7,9 @@
     </ng-template>
   </div>
   <div class="row">
+    <h2 [ngClass]="{attributeBinding: flag}">This is an example of 'ngClass'</h2>
+  </div>
+  <div class="row">
     <button (click)="toggleFlag()"> Toggle flag </button>
   </div>
 </div>
